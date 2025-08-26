@@ -47,3 +47,69 @@ DocuChat is a Streamlit-based AI-powered application that allows users to chat n
 Run the Streamlit app:
 ```bash
 streamlit run main.py
+
+---
+
+How to use DocuChat:
+
+Normal Chat Mode:
+
+Simply type your question in the input box and chat with the AI assistant.
+
+Document Q&A Mode:
+
+Upload one or multiple PDF files using the sidebar uploader.
+
+Click "Process PDFs" to extract, chunk, and embed the document contents.
+
+Once processed, ask questions specifically related to the uploaded documents.
+
+Click "Clear PDFs" to reset and upload new files.
+
+Code Overview
+
+main.py contains the full Streamlit application logic.
+
+Uses:
+
+PyPDF2 for PDF text extraction.
+
+langchain for text chunking, embeddings, vector search, and retrieval.
+
+streamlit for UI and caching.
+
+dotenv to load environment variables securely.
+
+Implements caching for LLM and embedding models to improve performance.
+
+Supports two modes:
+
+Normal Chat: Direct LLM interaction.
+
+RAG Q&A: Retrieves relevant document chunks using vector similarity and answers based on retrieved context.
+
+Dependencies
+
+Python 3.8+
+
+streamlit
+
+python-dotenv
+
+PyPDF2
+
+langchain
+
+faiss-cpu
+
+Other dependencies as listed in requirements.txt
+
+Troubleshooting
+
+Ensure Ollama model server is running and accessible.
+
+Verify .env variables are correctly set.
+
+Check PDF files are not corrupted.
+
+If you encounter push errors on GitHub, consider manual file upload as a workaround.
