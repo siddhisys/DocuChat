@@ -1,6 +1,5 @@
 # DocuChat - AI Document Assistant with RAG (Retrieval Augmented Generation)
-# This application allows users to either chat normally with an AI or upload PDFs 
-# and ask questions specifically about those documents
+# This application allows users to either chat normally with an AI or upload PDFs and ask questions specifically about those documents
 
 #importing all the necessary tools
 import streamlit as st  # Web framework for creating interactive Python apps
@@ -138,11 +137,11 @@ def main():
         if st.button("Process PDFs"):
             if pdf_docs:  # Check if files were uploaded
                 
-                # Show spinner while processing (UX improvement)
+                # Show spinner while processing
                 with st.spinner("Processing PDFs..."):
                     try:
                         # STEP 1: Extract text from PDFs
-                        st.write("Extracting text...")  # Progress indicator
+                        st.write("Extracting text...") 
                         raw_text = get_pdf_text(pdf_docs)
                         
                         # Validate that text was extracted
